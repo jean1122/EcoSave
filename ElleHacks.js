@@ -1,18 +1,36 @@
 var total = 0;
 var perKmMultiplier = 0;
 
-
 window.onload = function() {
    document.getElementById("total").innerHTML=(total/100).toFixed(2);
-
-   var ctx = document.getElementById('myChart');
-//    var myChart = new Chart(ctx, {
-//     type: 'line',
-//     data: data,
-//     options: options
-//    });
-
 } 
+
+function final(){
+    var ctx = document.getElementById('myChart');
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
+                datasets: [{
+                    label: '$',
+                    data: [19, 5, 2, total/100],
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                },
+                title: {
+                    display: true,
+                    text: 'Dollars Saved per Week'
+                }
+            }
+        });
+}
 
 //travel options and calculations
 function travel(){
