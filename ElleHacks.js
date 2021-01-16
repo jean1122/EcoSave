@@ -4,6 +4,14 @@ var perKmMultiplier = 0;
 
 window.onload = function() {
    document.getElementById("total").innerHTML=(total/100).toFixed(2);
+
+   var ctx = document.getElementById('myChart');
+//    var myChart = new Chart(ctx, {
+//     type: 'line',
+//     data: data,
+//     options: options
+//    });
+
 } 
 
 //travel options and calculations
