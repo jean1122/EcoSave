@@ -17,83 +17,99 @@ var isCar = 0;
 
 window.onload = function() {
     var totStr = localStorage.getItem('totalStorage');
-    console.log(totStr);
+    // console.log(totStr);
     if(totStr == null){
         totStr = "0";
     }
     total = parseInt(totStr);
-    document.getElementById("total").innerHTML=(total/100).toFixed(2);
+    if(JSON.stringify(window.location.href).includes('scorePage.html')){
+        document.getElementById("total").innerHTML=(total/100).toFixed(2);
+    }
+    
+    console.log(total);
 
     var scoreStr = localStorage.getItem('score');
-    console.log(scoreStr);
+    // console.log(scoreStr);
     if(scoreStr == null){
         scoreStr = "0";
     }
     score = parseInt(scoreStr);
-    document.getElementById("score").innerHTML=score;
+    if(JSON.stringify(window.location.href).includes('scorePage.html')){
+        document.getElementById("score").innerHTML=score;
+    }
+    console.log(score);
 
     var dollarPerKmStr = localStorage.getItem('dollarPerKm');
-    console.log(dollarPerKmStr);
+    // console.log(dollarPerKmStr);
     if(dollarPerKmStr == null){
         dollarPerKmStr = "0";
     }
     dollarPerKm = parseInt(dollarPerKmStr);
+    console.log(dollarPerKm);
 
     var kmPerMinStr = localStorage.getItem('kmPerMin');
-    console.log(kmPerMinStr);
+    // console.log(kmPerMinStr);
     if(kmPerMinStr == null){
         kmPerMinStr = "0";
     }
     kmPerMin = parseInt(kmPerMinStr);
+    console.log(kmPerMin);
 
     var travelDollarsMissedStr = localStorage.getItem('travelDollarsMissed');
-    console.log(travelDollarsMissedStr);
+    // console.log(travelDollarsMissedStr);
     if(travelDollarsMissedStr == null){
         travelDollarsMissedStr = "0";
     }
     travelDollarsMissed = parseInt(travelDollarsMissedStr);
+    console.log(travelDollarsMissed);
 
     var travelPointsMissedStr = localStorage.getItem('travelPointsMissed');
-    console.log(travelPointsMissedStr);
+    // console.log(travelPointsMissedStr);
     if(travelPointsMissedStr == null){
         travelPointsMissedStr = "0";
     }
     travelPointsMissed = parseInt(travelPointsMissedStr);
+    console.log(travelPointsMissed);
 
     var shoppingPointsMissedStr = localStorage.getItem('shoppingPointsMissed');
-    console.log(shoppingPointsMissedStr);
+    // console.log(shoppingPointsMissedStr);
     if(shoppingPointsMissedStr == null){
         shoppingPointsMissedStr = "0";
     }
     shoppingPointsMissed = parseInt(shoppingPointsMissedStr);
+    console.log(shoppingPointsMissed);
 
     var shoppingDollarsMissedStr = localStorage.getItem('shoppingDollarsMissed');
-    console.log(shoppingDollarsMissedStr);
+    // console.log(shoppingDollarsMissedStr);
     if(shoppingDollarsMissedStr == null){
         shoppingDollarsMissedStr = "0";
     }
     shoppingDollarsMissed = parseInt(shoppingDollarsMissedStr);
+    console.log(shoppingDollarsMissed);
 
     var elecDollarsMissedStr = localStorage.getItem('elecDollarsMissed');
-    console.log(elecDollarsMissedStr);
+    // console.log(elecDollarsMissedStr);
     if(elecDollarsMissedStr == null){
         elecDollarsMissedStr = "0";
     }
     elecDollarsMissed = parseInt(elecDollarsMissedStr);
+    console.log(elecDollarsMissed);
 
     var lifePointsMissedStr = localStorage.getItem('lifePointsMissed');
-    console.log(lifePointsMissedStr);
+    // console.log(lifePointsMissedStr);
     if(lifePointsMissedStr == null){
         lifePointsMissedStr = "0";
     }
     lifePointsMissed = parseInt(lifePointsMissedStr);
+    console.log(lifePointsMissed);
 
     var isCarStr = localStorage.getItem('isCar');
-    console.log(isCarStr);
+    // console.log(isCarStr);
     if(isCarStr == null){
         isCarStr = "0";
     }
     isCar = parseInt(isCarStr);
+    console.log(isCar);
 } 
 
 function reset(){
@@ -132,6 +148,8 @@ function summary(){
     });
     localStorage.setItem('totalStorage',JSON.stringify(total));
     localStorage.setItem('score',JSON.stringify(score));
+    document.getElementById("total").innerHTML=(total/100).toFixed(2);
+    document.getElementById("score").innerHTML=score;
 }
 
 function savings(){
@@ -140,22 +158,22 @@ function savings(){
     localStorage.setItem('score',JSON.stringify(score));
     document.getElementById("score").innerHTML=score;
 
-    localStorage.setItem('travelDollarsMissed',JSON.stringify(travelDollarsMissed));
-    document.getElementById("travelDollarsMissed").innerHTML=travelDollarsMissed;
-    localStorage.setItem('travelPointsMissed',JSON.stringify(travelPointsMissed));
-    document.getElementById("travelPointsMissed").innerHTML=travelPointsMissed;
-    localStorage.setItem('shoppingDollarsMissed',JSON.stringify(shoppingDollarsMissed));
-    document.getElementById("shoppingDollarsMissed").innerHTML=shoppingDollarsMissed;
-    localStorage.setItem('shoppingPointsMissed',JSON.stringify(shoppingPointsMissed));
-    document.getElementById("shoppingPointsMissed").innerHTML=shoppingPointsMissed;
-    localStorage.setItem('elecDollarsMissed',JSON.stringify(elecDollarsMissed));
-    document.getElementById("elecDollarsMissed").innerHTML=elecDollarsMissed;
-    localStorage.setItem('scelecPointsMissedore',JSON.stringify(elecPointsMissed));
-    document.getElementById("elecPointsMissed").innerHTML=elecPointsMissed;
-    localStorage.setItem('lifeDollarsMissed',JSON.stringify(lifeDollarsMissed));
-    document.getElementById("lifeDollarsMissed").innerHTML=lifeDollarsMissed;
-    localStorage.setItem('lifePointsMissed',JSON.stringify(lifePointsMissed));
-    document.getElementById("lifePointsMissed").innerHTML=lifePointsMissed;
+    // localStorage.setItem('travelDollarsMissed',JSON.stringify(travelDollarsMissed));
+    // document.getElementById("travelDollarsMissed").innerHTML=travelDollarsMissed;
+    // localStorage.setItem('travelPointsMissed',JSON.stringify(travelPointsMissed));
+    // document.getElementById("travelPointsMissed").innerHTML=travelPointsMissed;
+    // localStorage.setItem('shoppingDollarsMissed',JSON.stringify(shoppingDollarsMissed));
+    // document.getElementById("shoppingDollarsMissed").innerHTML=shoppingDollarsMissed;
+    // localStorage.setItem('shoppingPointsMissed',JSON.stringify(shoppingPointsMissed));
+    // document.getElementById("shoppingPointsMissed").innerHTML=shoppingPointsMissed;
+    // localStorage.setItem('elecDollarsMissed',JSON.stringify(elecDollarsMissed));
+    // document.getElementById("elecDollarsMissed").innerHTML=elecDollarsMissed;
+    // localStorage.setItem('scelecPointsMissedore',JSON.stringify(elecPointsMissed));
+    // document.getElementById("elecPointsMissed").innerHTML=elecPointsMissed;
+    // localStorage.setItem('lifeDollarsMissed',JSON.stringify(lifeDollarsMissed));
+    // document.getElementById("lifeDollarsMissed").innerHTML=lifeDollarsMissed;
+    // localStorage.setItem('lifePointsMissed',JSON.stringify(lifePointsMissed));
+    // document.getElementById("lifePointsMissed").innerHTML=lifePointsMissed;
 
 }
 
@@ -199,11 +217,12 @@ function transit(){
     isCar = 2;
     score += 10;
     localStorage.setItem('score',JSON.stringify(score));
+    console.log(total);
     window.location.href = 'travel.html#travel_q2_section';
 }
 
 function time(){
-    let time = document.getElementById('time').value;
+    let time = document.getElementById('dist').value;
     total += dollarPerKm * kmPerMin * time;
 
     if(isCar == 1){
@@ -216,11 +235,8 @@ function time(){
         travelDollarsMissed += 0;
     }
 
-    
-    document.getElementById("total").innerHTML=(total/100).toFixed(2);
+    console.log(total);
     localStorage.setItem('totalStorage',JSON.stringify(total));
-    document.getElementById("score").innerHTML=score;
-
     localStorage.setItem('travelDollarsMissed',JSON.stringify(travelDollarsMissed));
 
     window.location.href = 'index.html';
