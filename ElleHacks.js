@@ -1,173 +1,198 @@
+var dollarPerKm = 0;
 var total = 0;
-var perKmMultiplier = 0;
+var kmPerMin = 0;
+var score = 0;
 
 window.onload = function() {
-   document.getElementById("total").innerHTML=(total/100).toFixed(2);
+    var totStr = localStorage.getItem('totalStorage');
+    console.log(totStr);
+    if(totStr == null){
+        totStr = "0";
+    }
+    total = parseInt(totStr);
+    document.getElementById("total").innerHTML=(total/100).toFixed(2);
+
+    var scoreStr = localStorage.getItem('score');
+    console.log(scoreStr);
+    if(scoreStr == null){
+        scoreStr = "0";
+    }
+    score = parseInt(scoreStr);
+    document.getElementById("score").innerHTML=score;
 } 
+
+function reset(){
+    total = 0;
+    score = 0;
+    localStorage.setItem('totalStorage',JSON.stringify(total));
+    document.getElementById("total").innerHTML=(total/100).toFixed(2);
+    localStorage.setItem('score',JSON.stringify(score));
+    document.getElementById("score").innerHTML=score;
+}
 
 function final(){
     var ctx = document.getElementById('myChart');
-        var myChart = new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
-                datasets: [{
-                    label: '$',
-                    data: [19, 5, 2, total/100],
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
+            datasets: [{
+                label: '$',
+                data: [19, 5, 2, total/100],
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
                 }]
             },
-            options: {
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }]
-                },
-                title: {
-                    display: true,
-                    text: 'Dollars Saved per Week'
-                }
+            title: {
+                display: true,
+                text: 'Dollars Saved per Week'
             }
-        });
+        }
+    });
+    localStorage.setItem('totalStorage',JSON.stringify(total));
+    localStorage.setItem('score',JSON.stringify(score));
 }
 
 //travel options and calculations
 function travel(){
-    document.getElementById('car').style.display = "block";
-    document.getElementById('walk').style.display = "block";
-    document.getElementById('bike').style.display = "block";
-    document.getElementById('transit').style.display = "block";
+    window.location.href = 'travel.html';
 }
 
 function car(){
-    document.getElementById('dist').style.display = "block";
-    document.getElementById('distSubmit').style.display = "block";
     perKmMultiplier = 0;
+    kmPerMin = 1;
+    window.location.href = 'time.html';
 }
 
 function walk(){
-    document.getElementById('dist').style.display = "block";
-    document.getElementById('distSubmit').style.display = "block";
-    perKmMultiplier = 1000;
+    dollarPerKm = 1000;
+    kmPerMin = 0.083;
+
+    score += 10;
+    localStorage.setItem('score',JSON.stringify(score));
+    window.location.href = 'time.html';
 }
 
 function bike(){
-    document.getElementById('dist').style.display = "block";
-    document.getElementById('distSubmit').style.display = "block";
-    perKmMultiplier = 1000;
+    dollarPerKm = 1000;
+    kmPerMin = 0.417;
+
+    score += 10;
+    localStorage.setItem('score',JSON.stringify(score));
+    window.location.href = 'time.html';
 }
 
 function transit(){
-    document.getElementById('dist').style.display = "block";
-    document.getElementById('distSubmit').style.display = "block";
-    perKmMultiplier = 500;
+    dollarPerKm = 500;
+    kmPerMin = 1;
+
+    score += 10;
+    localStorage.setItem('score',JSON.stringify(score));
+    window.location.href = 'time.html';
 }
 
-function distSubmit(){
-    let distance = document.getElementById('dist').value;
-    total += perKmMultiplier * distance;
+function time(){
+    let time = document.getElementById('time').value;
+    total += dollarPerKm * kmPerMin * time;
+    
     document.getElementById("total").innerHTML=(total/100).toFixed(2);
+    localStorage.setItem('totalStorage',JSON.stringify(total));
+    document.getElementById("score").innerHTML=score;
 
-    document.getElementById('car').style.display = "none";
-    document.getElementById('walk').style.display = "none";
-    document.getElementById('bike').style.display = "none";
-    document.getElementById('transit').style.display = "none";
-
-    document.getElementById('dist').style.display = "none";
-    document.getElementById('distSubmit').style.display = "none";
-
+    window.location.href = 'index.html';
 }
 
 
 
 //shopping options and calculations
 function shopping(){
-    total += 5;
-    document.getElementById("total").innerHTML=(total/100).toFixed(2);
+    window.location.href = 'bag.html';
 }
 
+function bagYes(){
+    total += 5;
+    document.getElementById("total").innerHTML=(total/100).toFixed(2);
+    localStorage.setItem('totalStorage',JSON.stringify(total));
+
+    score += 10;
+    localStorage.setItem('score',JSON.stringify(score));
+
+    window.location.href = 'local.html';
+}
+
+function bagNo(){
+    window.location.href = 'local.html';
+}
+
+function local(){
+    score += 10;
+    localStorage.setItem('score',JSON.stringify(score));
+    window.location.href = 'index.html';
+}
+
+//Lifestyle options and calculations
+function lifestyle(){
+    window.location.href = 'container.html';
+}
+
+function containerYes(){
+    window.location.href = 'containerNum.html';
+}
+
+function containerNo(){
+    window.location.href = 'index.html';
+}
+
+function containerNum(){
+    let num = document.getElementById('num').value;
+    score += 10*num;
+    localStorage.setItem('score',JSON.stringify(score));
+    window.location.href = 'index.html';
+}
 
 //Electricity options and calculations
 function electricity(){
-    document.getElementById("Elec").innerHTML="What do you have plugged in?";
-    document.getElementById('coffee').style.display = "block";
-    document.getElementById('WM').style.display = "block";
-    document.getElementById('kettle').style.display = "block";
-    document.getElementById('toaster').style.display = "block";
-    document.getElementById('laptop').style.display = "block";
-    document.getElementById('phone').style.display = "block";
-    document.getElementById('dryer').style.display = "block";
-    document.getElementById('lamps').style.display = "block";
-    document.getElementById('monitor').style.display = "block";
-    document.getElementById('elecOnSubmit').style.display = "block";
+    window.location.href = 'device.html';
 }
 
-function elecOnSubmit(){
-    document.getElementById('coffee').style.display = "none";
-    document.getElementById('WM').style.display = "none";
-    document.getElementById('kettle').style.display = "none";
-    document.getElementById('toaster').style.display = "none";
-    document.getElementById('laptop').style.display = "none";
-    document.getElementById('phone').style.display = "none";
-    document.getElementById('dryer').style.display = "none";
-    document.getElementById('lamps').style.display = "none";
-    document.getElementById('monitor').style.display = "none";
-    document.getElementById('elecOnSubmit').style.display = "none";
-
-    document.getElementById("Elec").innerHTML="What do you NOT have plugged in?";
-    document.getElementById('coffeeOFF').style.display = "block";
-    document.getElementById('WMOFF').style.display = "block";
-    document.getElementById('kettleOFF').style.display = "block";
-    document.getElementById('toasterOFF').style.display = "block";
-    document.getElementById('laptopOFF').style.display = "block";
-    document.getElementById('phoneOFF').style.display = "block";
-    document.getElementById('dryerOFF').style.display = "block";
-    document.getElementById('lampsOFF').style.display = "block";
-    document.getElementById('monitorOFF').style.display = "block";
-    document.getElementById('elecOffSubmit').style.display = "block";
+function coffee(){
+    total += 0.0504 * 13;
+}
+function WM(){
+    total += 0.672 * 13;
+}
+function kettle(){
+    total += 0;
+}
+function toaster(){
+    total += 0;
+}
+function laptop(){
+    total += 4.5 * 13;
+}
+function phone(){
+    total += 0.084 * 13;
+}
+function dryer(){
+    total += 0.672 * 13;
+}
+function lamps(){
+    total += 0.84 * 13;
+}
+function monitor(){
+    total += 0.168 * 13;
 }
 
-function coffeeOFF(){
-    total += 10;
-}
-function WMOFF(){
-    total += 10;
-}
-function kettleOFF(){
-    total += 10;
-}
-function toasterOFF(){
-    total += 10;
-}
-function laptopOFF(){
-    total += 10;
-}
-function phoneOFF(){
-    total += 10;
-}
-function dryerOFF(){
-    total += 10;
-}
-function lampsOFF(){
-    total += 10;
-}
-function monitorOFF(){
-    total += 10;
-}
-
-function elecOffSubmit(){
-    document.getElementById("Elec").innerHTML= "";
-    document.getElementById('coffeeOFF').style.display = "none";
-    document.getElementById('WMOFF').style.display = "none";
-    document.getElementById('kettleOFF').style.display = "none";
-    document.getElementById('toasterOFF').style.display = "none";
-    document.getElementById('laptopOFF').style.display = "none";
-    document.getElementById('phoneOFF').style.display = "none";
-    document.getElementById('dryerOFF').style.display = "none";
-    document.getElementById('lampsOFF').style.display = "none";
-    document.getElementById('monitorOFF').style.display = "none";
-    document.getElementById('elecOffSubmit').style.display = "none";
-
+function elecSubmit(){
+    total = Math.ceil(total);
     document.getElementById("total").innerHTML=(total/100).toFixed(2);
+    localStorage.setItem('totalStorage',JSON.stringify(total));
+
+    window.location.href = 'index.html';
 }
