@@ -34,18 +34,19 @@ body {
 .nav-item a {
   color: #000000 !important;
   font-weight: bold;
+  font-size: 25px;
 }
 
 .nav-item a:hover{
-  color: #010155;
+  color: #3E703D;
   text-decoration: underline;
 }
 
 @media (min-width: 1280px) {
   .navbar-brand img {
     max-height: 80px;
-      margin-left: 20%;
-      margin-top: 10%
+      margin-left: 30%;
+      margin-top: 15%
   }
 
   .nav-item a {
@@ -55,9 +56,8 @@ body {
   }
 
   .navbar-nav {
-    margin-right: 5%;
+    margin-top: 5%
   }
-}
 
 @media (max-width: 1280px) {
   .navbar-brand img {
@@ -82,7 +82,7 @@ body {
 @media (max-width: 1024px) {
 
   .navbar ul {
-    margin-top: -20px;
+    margin-top: 0px;
   }
 
   .navbar-brand img {
@@ -131,5 +131,170 @@ body {
 
   .navbar-nav {
     text-align: center;
+  }
+}
+
+
+/***** HOME PAGE *****/
+#home {
+    height: 90vh;
+}
+
+.slogan {
+    margin-right: 3%;;
+    width: 50%;
+    position: absolute;
+    right: 0;
+}
+
+.slogan .container {
+    display: flex;
+    justify-content: center;
+    margin-top: 58%;
+}
+
+.slogan button {
+    background-color: #E8F0B4;
+    border-radius: 10px;
+    border: none;
+    color: black;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 40px;
+    margin-top: 40%;
+    margin-left: 30%;
+}
+
+@media (max-width: 1280px) {
+    .slogan {
+        margin-right: 5%;;
+    }
+
+    .slogan .container {
+        margin-top: 55%;
+    }
+
+}
+
+
+
+#category {
+    height: 50vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    border-spacing: 50px;
+}
+
+.container .column {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.container h5 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+.container a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.container a:link {
+    color: black;
+}
+
+.container a:hover {
+    color: #3E703D;
+}
+
+.container a:active {
+    text-decoration: none;
+}
+
+.bottom-header {
+    background-color: #A5DA49;
+    height: 130px;
+    text-align: center;
+}
+
+.bottom-header img {
+    margin-top: 20px;
+    max-width: 150px;
+}
+
+.bottom-header h5 {
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+/***** TRAVEL PAGE *****/
+@media (min-width: 725px) {
+  .travel-page {
+    background-image: url("../img/background/subpage_background1.svg");
+    background-size: 100%;
+    background-position: top;
+    overflow-x: hidden;
+  }
+
+}
+
+/***** SHOPPING PAGE *****/
+@media (min-width: 725px) {
+  .shopping-page {
+    background-image: url("../img/background/subpage_background2.svg");
+    background-size: 100%;
+    background-position: top;
+    background-color: #E4DECE;
+    overflow-x: hidden;
+  }
+
+}
+
+/***** ELECTRICITY PAGE *****/
+@media (min-width: 725px) {
+  .electricity-page {
+    background-image: url("../img/background/subpage_background1.svg");
+    background-size: 100%;
+    background-position: top;
+    overflow-x: hidden;
+  }
+
+}
+
+/***** LIFE STYLE PAGE *****/
+@media (min-width: 725px) {
+  .lifestyle-page {
+    background-image: url("../img/background/subpage_background2.svg");
+    background-size: 100%;
+    background-color: #E4DECE;
+    background-position: top;
+    overflow-x: hidden;
+  }
+
+}
+
+
+
+
+@media (max-width: 1024px) {
+
+
+}
+
+@media (max-width: 768px) {
+
+
+}
+
+@media (max-width: 320px) {
+
   }
 }
