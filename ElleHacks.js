@@ -183,7 +183,7 @@ function travel(){
 }
 
 function car(){
-    perKmMultiplier = 0;
+    dollarPerKm = 0;
     kmPerMin = 1;
 
     isCar = 1;
@@ -193,7 +193,7 @@ function car(){
 }
 
 function walk(){
-    dollarPerKm = 1000;
+    dollarPerKm = 20;
     kmPerMin = 0.083;
 
     score += 10;
@@ -202,7 +202,7 @@ function walk(){
 }
 
 function bike(){
-    dollarPerKm = 1000;
+    dollarPerKm = 20;
     kmPerMin = 0.417;
 
     score += 10;
@@ -211,7 +211,7 @@ function bike(){
 }
 
 function transit(){
-    dollarPerKm = 500;
+    dollarPerKm = 0;
     kmPerMin = 1;
 
     isCar = 2;
