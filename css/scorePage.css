@@ -1,0 +1,33 @@
+.navbar-custom{
+  background: #A5DA49;
+}
+
+button.pickButton{
+  background-color: transparent; 
+  border: 0px;
+}
+
+div.selections{
+  text-align: center;
+}
+
+div.points{
+  text-align: center;
+  width: 40%;
+  margin: auto;
+}
+
+div.bars{
+  margin: auto
+}
+
+img.bars{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p.points{
+  font-family: Roboto; 
+  color: #3E703D;
+}
