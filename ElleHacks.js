@@ -271,14 +271,14 @@ function bagNo(){
 function localNo(){
     shoppingPointsMissed += 10;
     localStorage.setItem('shoppingPointsMissed',JSON.stringify(shoppingPointsMissed));
-    window.location.href = 'save.html';
+    window.location.href = 'scorePage.html';
 }
 
 function localYes(){
     score += 10;
     localStorage.setItem('score',JSON.stringify(score));
     document.getElementById("score").innerHTML=score;
-    window.location.href = 'save.html';
+    window.location.href = 'scorePage.html';
 }
 
 //Lifestyle options and calculations
