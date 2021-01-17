@@ -1,113 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>EcoSave Test</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <script type = "text/javascript" src="ElleHacks.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="css/scorePage.css">
-</head>
-<body>
-<!-- -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
 
-    <div class="navbar-custom">
-        <nav class="navbar navbar-expand-lg navbar-light bg-green">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                
-            <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="#"><img src="img/logo/logo.png" alt="" height = "30px"><span class="sr-only">(current)</span></a>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/save.css">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <!--  JS  -->
+    <script type = "text/javascript" src="ElleHacks.js"></script>
+      
+    <title>Save</title>
+  </head>
+  <body class="save-page">
+    <nav class="navbar navbar-expand">
+      <div class="collapse navbar-collapse">
+        <a class="navbar-brand" href="index.html">
+          <img src="img/logo/logo.png" alt="">
+        </a>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#home">My Savings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">Summary</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+      
+    <section class="category" id="category">
+        <div class="container">
+            <div class="row">
+                <div class="column">
+                    <a href="travel.html">
+                        <img src="img/icon/travel.png" alt="travel">
+                        <h5>Travel</h5>
+                    </a>  
+                </div>
+                <div class="column">
+                    <a href="shopping.html">
+                        <img src="img/icon/shopping.png" alt="shopping">
+                        <h5>Shopping</h5>
+                    </a>   
+                </div>
+                <div class="column">
+                    <a href="electricity.html">
+                        <img src="img/icon/electricity.png" alt="electricity">
+                        <h5>Electricity</h5>
+                    </a>
+                </div>
+                <div class="column">
+                    <a href="lifestyle.html">
+                        <img src="img/icon/lifestyle.png" alt="lifestyle">
+                        <h5>Life Style</h5>
+                    </a>
+                </div>
             </div>
-
-            <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="scorePage.html">My Savings</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="summary.html">Summary</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-
+        </div>
+    </section>  
     
-    <div class="selections" style = "padding: 40px">
+    <section class="earn">
+      <div class="container">
+          <table>
+              <tr>
+                <th>
+                    <img src="img/scorePage/pigbank.png" alt="" height = "170px">
+                </th>
+                <th style="padding-left: 100px;color: #3E703D;">
+                    <p class= points style = "font-size: 40px;">You saved</p>
+                    <div class="piggy">
+                        <p style="float: left">$</p>
+                        <p class= points style = "float: right" id="total"></p>
+                    </div>
+
+                </th>
+              </tr>
+              <p> </p>
+              <p> </p>
+              <tr style="padding-top:50px;">
+                <th>
+                    <img src="img/scorePage/leaf.png" alt="" height = "170px">
+                </th>
+                <th class="earnings" style="padding-left: 100px;color: #3E703D;">
+                    <p class= points style = "font-size: 40px;">You earned</p>
+                    <div class="leaf">
+                        <p class= points style = "float:left" id="score"></p>
+                        <p class= points style = "float:right">&nbsp;&nbsp;points</p>
+                    </div>
+
+                </th>
+              </tr>
+            </table>
+        </div>
+    </section>
+    
+    <section class="recommendation">
         <div class="container">
-            <div class="row">
-                <div class="col">
-                    <button class = "pickButton" id="travel" onclick = "travel()" ><img src="img/scorePage/travel.png" alt="" height = "100px"></button>
-                    <p>Travel</p>
-                </div>
-
-                <div class="col">
-                    <button class = "pickButton" id="shopping" onclick = "shopping()" ><img src="img/scorePage/shopping.png" alt="" height = "100px"></button>
-                    <p>Shopping</p>
-                </div>
-
-                <div class="col">
-                    <button class = "pickButton" id="electricity" onclick = "electricity()" ><img src="img/scorePage/electricity.png" alt="" height = "100px"></button>
-                    <p>Electricity</p> 
-                </div>
-
-                <div class="col">
-                    <button class = "pickButton" id="lifestyle" onclick = "lifestyle()" ><img src="img/scorePage/lifestyle.png" alt="" height = "100px"></button>
-                    <p>Life Style</p> 
-                </div>
-                
-            </div>
+            <h1>Do you want to save more money and earn more EcoPoints?</h1>
+            
         </div>
-    </div>
-
-    <div class="points" style = "padding: 20px">
+        <div class="recomm">
+        
+        </div>
         <div class="container">
-            <div class="row">
-                <div class="col">
-                    <img src="img/scorePage/pigbank.png" alt="" height = "100px">
-                </div>
-
-                <div class="col">
-                    <p class= points style = "font-size: 30px;">You saved</p>
-                    <p class= points style = "font-size: 40px;" id="total"></p>
-                </div>
-
-                <div class="w-100" style = "padding: 10px"></div>
-
-                <div class="col">
-                    <img src="img/scorePage/leaf.png" alt="" height = "100px">
-                </div>
-                
-                <div class="col">
-                    <p class= points style = "font-size: 30px;">You earned </p>
-                    <p class= points style = "font-size: 40px;" id="score"></p>
-                    <p class= points style = "font-size: 30px;">points</p>
-                </div>
-            </div>
+            <img class="recomm-img" src="img/scorePage/recommend1.png" alt="travel method recommendation" width="900px;"> 
         </div>
-    </div>
-
-    <div class="bars" style = "padding: 20px">
-            <img class = "bars" src="img/scorePage/travelbar.png" alt="" height = "200px" style="padding: 10px">
-
-        <div class="row">
-            <img class = "bars" src="img/scorePage/shoppingbar.png" alt="" height = "200px" style="padding: 10px">
+        <div class="container">
+            <img class="recomm-img" src="img/scorePage/recommend2.png" alt="shopping recommendation" width="900px;">
         </div>
-
-        <div class="row">
-            <img class = "bars" src="img/scorePage/electricitybar.png" alt="" height = "200px" style="padding: 10px">
+        <div class="container">
+            <img class="recomm-img"src="img/scorePage/recommend3.png" alt="electricity recommendation" width="900px;">
         </div>
-
-        <div class="row">
-            <img class = "bars" src="img/scorePage/lifestylebar.png" alt="" height = "200px" style="padding: 10px">
+        <div class="container">
+            <img class="recomm-img" src="img/scorePage/recommend4.png" alt="life style recommendation" width="900px;">
         </div>
-    </div>
+        
+        
+    </section>
+      
+      
+      <section class="bottom-header" >
+<!--       <img src="img/background/bottom_background.png" alt="electricity">-->
+        <div class="container">
+            <img src="img/logo/logo.png" alt="">
+        </div>
+        <h5>Save Earth. Save Money.</h5>
+      
+    </section>
+    
 
-</body>
+  </body>
 </html>
