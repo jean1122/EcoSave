@@ -1,0 +1,145 @@
+/***** electricity PAGE *****/
+.electricity-page body {
+    overflow: hidden;
+}
+
+@media (min-width: 725px) {
+    .electricity-page {
+        
+    }
+    
+    .electricity_q1 {
+        height: 100vh;
+        text-align: center;
+        background-image: url("../img/background/subpage_background1.png");
+        background-size: 100%;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+    .electricity_q2 {
+        height: 100vh;
+        text-align: center;
+        background-image: url("../img/background/subpage_background1.png");
+        background-size: 100%;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.container .column {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+
+
+.electricity_q1 h1 {
+    font-size: 100px;
+    margin-top: 5%;
+}
+
+.electricity_q1 h2 {
+    font-size: 40px;
+    margin-top: 20px;;
+    margin-bottom: 20px;
+    
+}
+
+
+
+.electricity_q2 h1 {
+    font-size: 100px;
+    margin-top: 5%;
+}
+
+.electricity_q2 h2 {
+    font-size: 50px;
+    margin-top: 10%;
+    margin-bottom: 5%;
+} 
+.electricity_q1 .row {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.electricity_q1 button {
+    background-color: #C2B7A3;
+    font-size: 35px;
+    width: 300px;
+    height: 100px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+
+#coffee button:active {
+    background-color: #9A8B6E;
+    font-size: 35px;
+    width: 300px;
+    height: 100px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+#coffee button:focus {
+    background-color: #9A8B6E;
+    font-size: 35px;
+    width: 300px;
+    height: 100px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+#WM button:active {
+    background-color: #9A8B6E;
+    font-size: 35px;
+    width: 300px;
+    height: 100px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.electricity_q2 button {
+    background-color: #C2B7A3;
+    font-size: 40px;
+    width: 300px;
+    height: 80px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.electricity_q2 input {
+    width: 300px;
+    height: 80px;
+    border: none;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.electricity_q2 p {
+    font-size: 20px;
+}
+
+#next-button {
+    width: 200px;
+    height: 70px;
+    border: none;
+    border-radius: 15px;
+    background-color: #C2B7A3;
+    font-size: 35px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+    
+}

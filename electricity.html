@@ -4,7 +4,7 @@
     <meta charset="utf-8">
       
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/electricity.css">
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -13,9 +13,81 @@
     <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
       
-    <title>Travel</title>
-  </head>
-  <body class="electricity-page">
+    <!--  JS  -->
+    <script type = "text/javascript" src="ElleHacks.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+      
+    <title>Electricity</title>
+  </head>
+  <body class="electricity-page" style="overflow: hidden;">
+      
+      <section class="electricity_q1" id="electricity_q1_section">
+          <h1>Electricity</h1>
+          <h2>Check around your home, which ones do you <br>have them <strong>OFF</strong> and <strong>unplugged</strong>?</h2>
+          
+          <div class="container">
+            <div class="row">
+                <div class="column">
+                    <button id="coffee" onclick = "coffee()">Coffee Machine</button>
+                </div>
+                <div class="column">
+                    <button id="WM" onClick="WM()">Washing Machine</button>
+                </div>
+                <div class="column">
+                    <button id="kettle" onClick="kettle()">Kettle</button>
+                </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+                <div class="column">
+                    <button id="toaster" onclick = "toaster()">Toaster</button>
+                </div>
+                <div class="column">
+                    <button id="laptop" onClick="laptop()">Laptop Charger</button>
+                </div>
+                <div class="column">
+                    <button id="phone" onClick="phone()">Phone Charger</button>
+                </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+                <div class="column">
+                    <button id="dryer" onclick = "dryer()">Dryer</button>
+                </div>
+                <div class="column">
+                    <button id="lamps" onClick="lamps()">Lamps</button>
+                </div>
+                <div class="column">
+                    <button id="monitor" onClick="monitor()">Monitor</button>
+                </div>
+            </div>
+          </div>
+          <a href="scorePage.html">
+            <button id="next-button" onclick = "elecOffSubmit()" >Next</button>
+          </a>
+          
+      </section>
+      
+      <section class="electricity_q2" id="electricity_q2_section">
+          <h2>Have you bought any non-local products today?</h2>
+          <div class="container">
+            <div class="row">
+                <div class="column">
+                    <button onclick = "localYes()">Yes</button>
+                </div>
+                <div class="column">
+                    <button onClick="localNo()">No</button>
+                </div>
+            </div>
+          </div>
+          
+      </section>
+      <section>
+        <p id="total" style="display: none"></p>
+        <p id="score" style="display: none"></p>
+      </section>
   </body>
 </html>

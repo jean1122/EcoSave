@@ -285,13 +285,13 @@ function lifestyle(){
 }
 
 function containerYes(){
-    window.location.href = 'containerNum.html';
+    window.location.href = 'lifestyle.html#lifestyle_q2_section';
 }
 
 function containerNo(){
     lifePointsMissed += 10;
     localStorage.setItem('lifePointsMissed',JSON.stringify(lifePointsMissed));
-    window.location.href = 'index.html';
+    window.location.href = 'scorePage.html';
 }
 
 function containerNum(){
@@ -299,7 +299,7 @@ function containerNum(){
     score += 10*num;
     localStorage.setItem('score',JSON.stringify(score));
     document.getElementById("score").innerHTML=score;
-    window.location.href = 'index.html';
+    window.location.href = 'scorePage.html';
 }
 
 //Electricity options and calculations
@@ -309,30 +309,40 @@ function electricity(){
 
 function coffee(){
     total += 0.0504 * 13;
+    document.getElementById('coffee').style.backgroundColor = "#9A8B6E";
 }
 function WM(){
     total += 0.672 * 13;
+    document.getElementById('WM').style.backgroundColor = "#9A8B6E";
+
 }
 function kettle(){
     total += 0;
+    document.getElementById('kettle').style.backgroundColor = "#9A8B6E";
 }
 function toaster(){
     total += 0;
+    document.getElementById('toaster').style.backgroundColor = "#9A8B6E";
 }
 function laptop(){
     total += 4.5 * 13;
+    document.getElementById('laptop').style.backgroundColor = "#9A8B6E";
 }
 function phone(){
     total += 0.084 * 13;
+    document.getElementById('phone').style.backgroundColor = "#9A8B6E";
 }
 function dryer(){
     total += 0.672 * 13;
+    document.getElementById('dryer').style.backgroundColor = "#9A8B6E";
 }
 function lamps(){
     total += 0.84 * 13;
+    document.getElementById('lamps').style.backgroundColor = "#9A8B6E";
 }
 function monitor(){
     total += 0.168 * 13;
+    document.getElementById('monitor').style.backgroundColor = "#9A8B6E";
 }
 
 function elecSubmit(){
