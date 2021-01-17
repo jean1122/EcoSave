@@ -241,26 +241,26 @@ function bagYes(){
     score += 10;
     localStorage.setItem('score',JSON.stringify(score));
 
-    window.location.href = 'local.html';
+    window.location.href = 'shopping.html#shopping_q2_section';
 }
 
 function bagNo(){
     shoppingPointsMissed += 10;
     localStorage.setItem('shoppingPointsMissed',JSON.stringify(shoppingPointsMissed));
-    window.location.href = 'local.html';
+    window.location.href = 'shopping.html#shopping_q2_section';
 }
 
 function localNo(){
     shoppingPointsMissed += 10;
     localStorage.setItem('shoppingPointsMissed',JSON.stringify(shoppingPointsMissed));
-    window.location.href = 'index.html';
+    window.location.href = 'save.html';
 }
 
 function localYes(){
     score += 10;
     localStorage.setItem('score',JSON.stringify(score));
     document.getElementById("score").innerHTML=score;
-    window.location.href = 'index.html';
+    window.location.href = 'save.html';
 }
 
 //Lifestyle options and calculations

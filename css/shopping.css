@@ -1,14 +1,14 @@
-/***** TRAVEL PAGE *****/
-.travel-page body {
+/***** shopping PAGE *****/
+.shopping-page body {
     overflow: hidden;
 }
 
 @media (min-width: 725px) {
-    .travel-page {
+    .shopping-page {
         
     }
     
-    .travel_q1 {
+    .shopping_q1 {
         height: 100vh;
         text-align: center;
         background-image: url("../img/background/subpage_background1.png");
@@ -17,7 +17,7 @@
         overflow-y: hidden;
     }
 
-    .travel_q2 {
+    .shopping_q2 {
         height: 100vh;
         text-align: center;
         background-image: url("../img/background/subpage_background1.png");
@@ -40,12 +40,12 @@
 
 
 
-.travel_q1 h1 {
+.shopping_q1 h1 {
     font-size: 100px;
     margin-top: 5%;
 }
 
-.travel_q1 h2 {
+.shopping_q1 h2 {
     font-size: 50px;
     margin-top: 5%;
     margin-bottom: 5%;
@@ -54,22 +54,22 @@
 
 
 
-.travel_q2 h1 {
+.shopping_q2 h1 {
     font-size: 100px;
     margin-top: 5%;
 }
 
-.travel_q2 h2 {
+.shopping_q2 h2 {
     font-size: 50px;
-    margin-top: 5%;
+    margin-top: 10%;
     margin-bottom: 5%;
 } 
-.travel_q1 .row {
+.shopping_q1 .row {
     margin-top: 30px;
     margin-bottom: 30px;
 }
 
-.travel_q1 button {
+.shopping_q1 button {
     background-color: #C2B7A3;
     font-size: 40px;
     width: 300px;
@@ -79,7 +79,17 @@
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
 }
 
-.travel_q2 input {
+.shopping_q2 button {
+    background-color: #C2B7A3;
+    font-size: 40px;
+    width: 300px;
+    height: 80px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.shopping_q2 input {
     width: 300px;
     height: 80px;
     border: none;
@@ -88,7 +98,7 @@
     font-size: 30px;
 }
 
-.travel_q2 p {
+.shopping_q2 p {
     font-size: 20px;
 }
 

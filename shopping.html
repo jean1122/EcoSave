@@ -4,7 +4,7 @@
     <meta charset="utf-8">
       
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/shopping.css">
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -13,9 +13,50 @@
     <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
       
-    <title>Travel</title>
+    <!--  JS  -->
+    <script type = "text/javascript" src="ElleHacks.js"></script>
+      
+    <title>Shopping</title>
   </head>
-  <body class="shopping-page">
-
+  <body class="shopping-page" style="overflow: hidden;">
+      
+      <section class="shopping_q1" id="shopping_q1_section">
+          <h1>Shopping</h1>
+          <h2>Did you bring your shopping bag today?</h2>
+          
+          <div class="container">
+            <div class="row">
+                <div class="column">
+                    <button onclick = "bagYes()">Yes</button>
+                </div>
+                <div class="column">
+                    <button onClick="bagNo()">No</button>
+                </div>
+            </div>
+          </div>
+      </section>
+      
+      <section class="shopping_q2" id="shopping_q2_section">
+          <h2>Have you bought any non-local products today?</h2>
+          <div class="container">
+            <div class="row">
+                <div class="column">
+                    <button onclick = "localYes()">Yes</button>
+                </div>
+                <div class="column">
+                    <button onClick="localNo()">No</button>
+                </div>
+            </div>
+          </div>
+          
+          <a href="save.html">
+            <button id="next-button" style="margin-top: 10%;">Next</button>
+          </a>
+          
+      </section>
+      <section>
+        <p id="total" style="display: none"></p>
+        <p id="score" style="display: none"></p>
+      </section>
   </body>
 </html>
