@@ -22,7 +22,8 @@ window.onload = function() {
         totStr = "0";
     }
     total = parseInt(totStr);
-    if(JSON.stringify(window.location.href).includes('scorePage.html')){
+    if(JSON.stringify(window.location.href).includes('scorePage.html') ||
+    JSON.stringify(window.location.href).includes('summary.html') ){
         document.getElementById("total").innerHTML=(total/100).toFixed(2);
     }
     
@@ -34,7 +35,8 @@ window.onload = function() {
         scoreStr = "0";
     }
     score = parseInt(scoreStr);
-    if(JSON.stringify(window.location.href).includes('scorePage.html')){
+    if(JSON.stringify(window.location.href).includes('scorePage.html') ||
+    JSON.stringify(window.location.href).includes('summary.html') ){
         document.getElementById("score").innerHTML=score;
     }
     console.log(score);
