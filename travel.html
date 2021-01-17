@@ -4,7 +4,7 @@
     <meta charset="utf-8">
       
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/travel.css">
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -13,9 +13,48 @@
     <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
       
+    <!--  JS  -->
+    <script type = "text/javascript" src="ElleHacks.js"></script>
+      
     <title>Travel</title>
   </head>
-  <body class="travel-page">
+  <body class="travel-page" style="overflow: hidden;">
+      
+      <section class="travel_q1" id="travel_q1_section">
+          <h1>Travel</h1>
+          <h2>How did you travel today?</h2>
+          
+          <div class="container">
+            <div class="row">
+                <div class="column">
+                    <button onclick = "car()">Car</button>
+                </div>
+                <div class="column">
+                    <button onClick="bike()">Bike</button>
+                </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+                <div class="column">
+                    <button onClick="walk()">Walk</button>
+                </div>
+                <div class="column">
+                    <button onClick="transit()">Public Transit</button>
+                </div>
+            </div>
 
+          </div>
+      </section>
+      
+      <section class="travel_q2" id="travel_q2_section">
+          <h2>How long did you travel today?</h2>
+          <div class="input-box">
+            <input type = "number" id="dist">
+            <p>minutes</p>
+          </div>
+          
+          <button id="next-button" style="margin-top: 5%;">Next</button>
+      </section>
   </body>
 </html>

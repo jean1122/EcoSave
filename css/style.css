@@ -125,33 +125,27 @@ body {
     padding-bottom: 20px;
 }
 
-***** TRAVEL PAGE *****/
-@media (min-width: 725px) {
-  .travel-page {
-    background-image: url("../img/background/subpage_background1.svg");
-    background-size: 100%;
-    background-position: top;
-    overflow-x: hidden;
-  }
 
-}
 
 /***** SHOPPING PAGE *****/
 @media (min-width: 725px) {
   .shopping-page {
-    background-image: url("../img/background/subpage_background2.svg");
+    background-image: url("../img/background/ShoppingBackground.png");
     background-size: 100%;
     background-position: top;
     background-color: #E4DECE;
     overflow-x: hidden;
+    overflow: hidden;
+    
   }
 
 }
 
+
 /***** ELECTRICITY PAGE *****/
 @media (min-width: 725px) {
   .electricity-page {
-    background-image: url("../img/background/subpage_background1.svg");
+    background-image: url("../img/background/ElectricityBackground.png");
     background-size: 100%;
     background-position: top;
     overflow-x: hidden;
@@ -162,7 +156,7 @@ body {
 /***** LIFE STYLE PAGE *****/
 @media (min-width: 725px) {
   .lifestyle-page {
-    background-image: url("../img/background/subpage_background2.svg");
+    background-image: url("../img/background/LifeStyleBackground.png");
     background-size: 100%;
     background-color: #E4DECE;
     background-position: top;

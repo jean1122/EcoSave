@@ -171,7 +171,7 @@ function car(){
     isCar = 1;
 
     travelPointsMissed += 10;
-    window.location.href = 'time.html';
+    window.location.href = 'travel.html#travel_q2_section';
 }
 
 function walk(){
@@ -180,7 +180,7 @@ function walk(){
 
     score += 10;
     localStorage.setItem('score',JSON.stringify(score));
-    window.location.href = 'time.html';
+    window.location.href = 'travel.html#travel_q2_section';
 }
 
 function bike(){
@@ -189,7 +189,7 @@ function bike(){
 
     score += 10;
     localStorage.setItem('score',JSON.stringify(score));
-    window.location.href = 'time.html';
+    window.location.href = 'travel.html#travel_q2_section';
 }
 
 function transit(){
@@ -199,7 +199,7 @@ function transit(){
     isCar = 2;
     score += 10;
     localStorage.setItem('score',JSON.stringify(score));
-    window.location.href = 'time.html';
+    window.location.href = 'travel.html#travel_q2_section';
 }
 
 function time(){
