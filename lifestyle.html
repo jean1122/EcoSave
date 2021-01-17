@@ -4,7 +4,7 @@
     <meta charset="utf-8">
       
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lifestyle.css">
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -13,9 +13,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
       
-    <title>Travel</title>
+    <!--  JS  -->
+    <script type = "text/javascript" src="ElleHacks.js"></script>
+      
+    <title>Life Style</title>
   </head>
-  <body class="lifestyle-page">
-
+  <body class="lifestyle-page" style="overflow: hidden;">
+      
+      <section class="lifestyle_q1" id="lifestyle_q1_section">
+          <h1>Life Style</h1>
+          <h2>Did you buy any drinks today?</h2>
+          <div class="container">
+            <div class="row">
+                <div class="column">
+                    <button onclick = "containerYes()">Yes</button>
+                </div>
+                <div class="column">
+                    <button onClick="containerNo()">No</button>
+                </div>
+            </div>
+          </div>
+      </section>
+      
+      <section class="lifestyle_q2" id="lifestyle_q2_section">
+          <h2>How many times did you use a reusable container?</h2>
+          <div class="input-box">
+            <input type = "number" id="num">
+            <p>times</p>
+          </div>
+          
+          <a href="scorePage.html">
+            <button id="next-button" onClick="containerNum()" style="margin-top: 5%;">Next</button>
+          </a>
+          
+      </section>
+      <section>
+        <p id="total" style="display: none"></p>
+        <p id="score" style="display: none"></p>
+      </section>
   </body>
 </html>

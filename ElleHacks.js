@@ -269,13 +269,13 @@ function lifestyle(){
 }
 
 function containerYes(){
-    window.location.href = 'containerNum.html';
+    window.location.href = 'lifestyle.html#lifestyle_q2_section';
 }
 
 function containerNo(){
     lifePointsMissed += 10;
     localStorage.setItem('lifePointsMissed',JSON.stringify(lifePointsMissed));
-    window.location.href = 'index.html';
+    window.location.href = 'scorePage.html';
 }
 
 function containerNum(){
@@ -283,7 +283,7 @@ function containerNum(){
     score += 10*num;
     localStorage.setItem('score',JSON.stringify(score));
     document.getElementById("score").innerHTML=score;
-    window.location.href = 'index.html';
+    window.location.href = 'scorePage.html';
 }
 
 //Electricity options and calculations
